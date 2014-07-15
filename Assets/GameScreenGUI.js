@@ -23,6 +23,7 @@ function OnGUI()
 	GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),screenTop);
 	GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),screenBottom);
 	stageLabel.fontSize = Screen.height*0.1;
+	stageLabel.padding = new RectOffset(0,0,Screen.height*0.025,0);
 	GUI.Label(new Rect(0,0,Screen.width,Screen.height),"Stage " + StageInfo.stageNO,stageLabel);
 	//stageLabel
 }
