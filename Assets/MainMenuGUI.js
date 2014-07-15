@@ -30,7 +30,7 @@ function OnGUI()
 		Debug.Log("GG");
 		if((playRect.center - Event.current.mousePosition).magnitude <= playSize/2.0)
 		{
-			StageInfo.ChangeStage(2);
+			//StageInfo.ChangeStage(2);
 			//Debug.Log(StageInfo.mapPath);
 			Application.LoadLevel("GameScene");
 		}

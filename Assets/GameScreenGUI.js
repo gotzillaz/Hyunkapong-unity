@@ -6,6 +6,7 @@ var background : Texture;
 var screenTop : Texture;
 var screenBottom : Texture;
 var logoPic : Texture;
+var stageLabel : GUIStyle;
 
 function OnGUI()
 {
@@ -21,19 +22,7 @@ function OnGUI()
 	//GUI.Box(new Rect(Screen.width/2.0-Screen.width*resizeRatio2/2,0,Screen.width*resizeRatio2,Screen.height*resizeRatio2),logoPic,GUIStyle.none);
 	GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),screenTop);
 	GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),screenBottom);
-	/*var playSize : float = Screen.width*0.6;
-	if(GUI.Button(new Rect(Screen.width/2-playSize/2,Screen.height*0.6-playSize/2,playSize,playSize),startButton,GUIStyle.none))
-	{
-		Debug.Log("GG");
-		Application.LoadLevel("GameScene");
-	}
-	var filePath : String = "Assets/maps/1.in";
-	var sr = new File.OpenText(filePath);
-	var input = "";
-	while(true)
-	{
-		input = sr.ReadLine();
-		if(input == null) break;
-		Debug.Log(input);
-	}*/
+	stageLabel.fontSize = Screen.height*0.1;
+	GUI.Label(new Rect(0,0,Screen.width,Screen.height),"Stage " + StageInfo.stageNO,stageLabel);
+	//stageLabel
 }
